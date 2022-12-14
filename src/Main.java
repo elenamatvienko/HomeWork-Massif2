@@ -31,8 +31,7 @@ public class Main {
         int max = -1;
         int min = arr[0] + 1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) ;
-            {
+            if (arr[i] > max) {
                 max = arr[i];
             }
             if (arr[i] < min) {
@@ -47,9 +46,9 @@ public class Main {
         System.out.println("Задача 3");
         int[] arr = generateRandomArray();
         int sum = 0;
-        int medium = 0;
+        double medium = 0;
         for (int i = 0; i < arr.length; i++) {
-            medium = (sum += arr[i]) / 30;
+            medium = (sum += arr[i]) / arr.length;
         }
         System.out.println("Средняя сумма трат за месяц составила " + medium + " рублей.");
     }
