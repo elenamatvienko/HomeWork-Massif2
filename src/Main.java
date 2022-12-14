@@ -31,25 +31,25 @@ public class Main {
         int max = -1;
         int min = arr[0] + 1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] / 30 > max) {
-                max = arr[i] / 30;
-                for (int j = 0; j < arr.length; j++) {
-                    if (arr[j] / 30 < min) {
-                        min = arr[j] / 30;
-                    }
-                }
+            if (arr[i] > max) ;
+            {
+                max = arr[i];
             }
-            System.out.println("Минимальная сумма трат за день составила " + min + " рублей. Максимальная сумма трат за день составила " + max + " рублей.");
-            break;
+            if (arr[i] < min) {
+                min = arr[i];
+            }
         }
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей. Максимальная сумма трат за день составила " + max + " рублей.");
+
     }
 
     public static void task3() {
         System.out.println("Задача 3");
         int[] arr = generateRandomArray();
+        int sum = 0;
         int medium = 0;
         for (int i = 0; i < arr.length; i++) {
-            medium += arr[i] / 30;
+            medium = (sum += arr[i]) / 30;
         }
         System.out.println("Средняя сумма трат за месяц составила " + medium + " рублей.");
     }
