@@ -45,11 +45,13 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int[] arr = generateRandomArray();
-        int sum = 0;
+        double sum = 0;
         double medium = 0;
         for (int i = 0; i < arr.length; i++) {
-            medium = (sum += arr[i]) / arr.length;
+            sum += arr[i];
         }
+            medium =  sum / arr.length;
+
         System.out.println("Средняя сумма трат за месяц составила " + medium + " рублей.");
     }
 
